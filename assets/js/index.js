@@ -99,6 +99,8 @@ $(document).ready(function() {
   // 윈도우 리사이즈 이벤트에 따라 실행
   $(window).resize(function() {
       toggleSiteMap();
+
+
   });
 
 
