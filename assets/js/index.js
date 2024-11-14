@@ -82,14 +82,22 @@ $(document).ready(function() {
     $('.siteMap').removeClass('active');
     $('.header .container.lora .mainLogo').removeClass('active');
     $('.background').removeClass('active');
+
   });
 
+  //사이트맵 백그라운드
+  $('.background').on('click',function(){
+    $('.siteMap').removeClass('active');
+    $('.header .container.lora .mainLogo').removeClass('active');
+    $('.background').removeClass('active');
+  });
+
+  // 윈도우 리사이즈 이벤트
   function toggleSiteMap() {
     if ($(window).width() >= 982) {
       $('.siteMap').removeClass('active');
       $('.header .container.lora .mainLogo').removeClass('active');
       $('.background').removeClass('active');
-      $('html, body').css({'overflow': 'visible'});
     }
   }
 
@@ -99,10 +107,7 @@ $(document).ready(function() {
   // 윈도우 리사이즈 이벤트에 따라 실행
   $(window).resize(function() {
       toggleSiteMap();
-
-
   });
-
 
   // 비주얼3 슬라이드 스와이퍼
   let swiper = new Swiper('.projectSwiper', {
